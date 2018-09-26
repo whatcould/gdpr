@@ -1,9 +1,12 @@
 <% if cookies && cookies['gdpr.cookie_consent.ok'] != 'true' %>
   <div class="gdpr__cookie_consent js-gdpr__cookie_consent">
-    <div class="gdpr__cookie_consent__text">
-      <%= t('gdpr.cookie_consent.text') %>
-      <br />
-      <%= t('gdpr.cookie_consent.learn_more_html', link: t('gdpr.privacy_policy')) %>
+    <div class="gdpr__cookie_consent__wrap">
+      <div class="gdpr__cookie_consent__text">
+        <%= t('gdpr.cookie_consent.text') %>
+      </div>
+      <div class="gdpr__cookie_consent__learn_more">
+        <%= t('gdpr.cookie_consent.learn_more_html', link: t('gdpr.privacy_policy')) %>
+      </div>
     </div>
     <div class="gdpr__cookie_consent__buttons">
       <button class="gdpr__cookie_consent__buttons__ok js-gdpr__cookie_consent__buttons__ok"> <%= t('gdpr.cookie_consent.button') %></button>
